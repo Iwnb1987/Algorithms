@@ -1,1 +1,24 @@
+//It starts with a boolean
+const power = "batteryIn";
+const surge = "batteryOut";
+console.log(power !== surge)   //true
 
+
+//do While. when STATE or state is entered in the prompt, you'll get an alert message saying you're correct.
+let secret;
+do {
+  secret = prompt("What's the password?");
+} while (secret !== 'STATE'.toLowerCase()) {
+alert(`${secret} is correct.`);
+}
+
+
+//array. this returns all people in the array and their credentials. Oldest to youngest.
+//And if ages are identical, they will be sorted lexicographically.
+let people = [{
+  name: 'Mike', age: 30, job: 'Project Manager'
+}, {
+  name: 'Damion', age: 52, job: 'Taxi Driver'}];
+people.sort((a,b) => a.age - b.age);
+people.sort((a,b) => a.name.localeCompare(b.name));
+console.log(people)
