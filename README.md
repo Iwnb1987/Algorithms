@@ -1,3 +1,3 @@
 # Algorithms
-My toughest projects to complete at AlgoCademy.
-Here, you'll witness more complex JavaScript engineering for beginners.
+My most perplexing challenges at AlgoCademy. 
+250 lines of complex JavaScript engineering for beginners.
