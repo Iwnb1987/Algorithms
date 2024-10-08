@@ -1,3 +1,3 @@
 # Algorithms
-My most perplexing challenges at AlgoCademy. 
-250 lines of complex JavaScript engineering for beginners.
+My most perplexing problem solving challenges. 
+200 lines of complex JavaScript engineering for beginners.
