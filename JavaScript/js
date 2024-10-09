@@ -4,16 +4,7 @@ const surge = "batteryOut";
 console.log(power !== surge)   //true
 
 
-//do While. when STATE or state is entered in the prompt, you'll get an alert message saying you're correct.
-let secret;
-do {
-  secret = prompt("What's the password?");
-} while (secret !== 'STATE'.toLowerCase()) {
-alert(`${secret} is correct.`);
-}
-
-
-//array. this returns all people in the array and their credentials. Oldest to youngest.
+//Array. this returns all people in the array and their credentials. Oldest to youngest.
 //And if ages are identical, they will be sorted lexicographically.
 let people = [{
   name: 'Mike', age: 30, job: 'Project Manager'
@@ -22,3 +13,73 @@ let people = [{
 people.sort((a,b) => a.age - b.age);
 people.sort((a,b) => a.name.localeCompare(b.name));
 console.log(people)
+
+
+//Switch Method. Task Check list.
+let tasks = 'research';
+switch(tasks) {
+  case 'research':
+    let onFile = 'Project III';
+    console.log("We start the project today")
+    break;
+  default: console.log(`there's no ${tasks} to be completed`)
+};
+
+//Here's a more advanced Swith Method.
+//This will also check if there's any tasks to be done.
+let research = 'resources';
+switch(research) {
+  case "Account":
+    console.log(187)
+    break;
+  case "Software":
+  case "Pharmaceuticals":
+    console.log("How's the developement of the product going?")
+    break;
+  default:
+    console.log(`There's no ${research} tasks available`)
+}
+console.log("...")
+
+
+//A Try Catch Method. You're prompted for a number
+//If you enter 0 or a letter you'll get an error message
+try {
+  let dividend = Number(prompt('enter a dividend:'));
+  let divisor = Number(prompt('enter a divisor:'));
+  if(divisor === 0) {
+    throw new Error("can't divide by 0");
+  }
+  if(isNaN(dvidend / divisor)) {
+    throw new Error("Numbers only")
+  }
+  let result = dividend / divisor;
+  consolelog(result)
+}
+catch(error) {
+  console.log(error)
+}
+console.log('You made it to the end!')
+
+
+//Filter Method. Filters what numbers are divisible by 8 and 3 with nothing left over.
+//if there is numbers left over, it will return false.
+let numbers = [10, 14, 20, 24, 30, 34, 40, 42, 46, 49, 50, 55, 60, 70];
+let even = numbers.filter(isEven);
+function isEven(element) {
+  console.log(element % 8 === 0)
+}
+isEven();
+let odd = numbers.filter(isOdd);
+function isOdd(elements) {
+  console.log(elements % 3 === 0)
+}
+
+
+//A Sort Method. It sorts the string and interger arrays lexicographically and numerically.
+let fruits = ['apple', 'orange', 'lemon', 'lime'];
+let num = [1, 10, 100, 3, 77,63,73,88, 90];
+fruits.sort();
+console.log(fruits)
+num.sort((a,b) => a-b);
+console.log(num)
