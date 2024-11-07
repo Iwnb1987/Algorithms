@@ -83,3 +83,18 @@ fruits.sort();
 console.log(fruits)
 num.sort((a,b) => a-b);
 console.log(num)
+
+//Brute Force #1 using a technique called destructuring assignment,
+//I'm able to swap the values of nums[i] and nums[j]. Each Iteration gradually 
+//sorts the array in ascending order
+class Solution {
+    sort(nums) {
+    for(let i = 0; i < nums.length; i++){
+       for(let j = i + 1; j < nums.length; j++){
+           if(nums[i] > nums[j]){
+               [nums[i], nums[j]] = [nums[j], nums[i]];
+           }
+       } 
+    }
+    }
+}
