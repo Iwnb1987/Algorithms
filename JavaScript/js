@@ -1,9 +1,3 @@
-//It starts with a boolean
-const power = "batteryIn";
-const surge = "batteryOut";
-console.log(power !== surge)   //true
-
-
 //Array. this returns all people in the array and their credentials. Oldest to youngest.
 //And if ages are identical, they will be sorted lexicographically.
 let people = [{
