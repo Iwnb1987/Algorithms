@@ -9,33 +9,6 @@ people.sort((a,b) => a.name.localeCompare(b.name));
 console.log(people)
 
 
-//Switch Method. Task Check list.
-let tasks = 'research';
-switch(tasks) {
-  case 'research':
-    let onFile = 'Project III';
-    console.log("We start the project today")
-    break;
-  default: console.log(`there's no ${tasks} to be completed`)
-};
-
-//Here's a more advanced Swith Method.
-//This will also check if there's any tasks to be done.
-let research = 'resources';
-switch(research) {
-  case "Account":
-    console.log(187)
-    break;
-  case "Software":
-  case "Pharmaceuticals":
-    console.log("How's the developement of the product going?")
-    break;
-  default:
-    console.log(`There's no ${research} tasks available`)
-}
-console.log("...")
-
-
 //A Try Catch Method. You're prompted for a number
 //If you enter 0 or a letter you'll get an error message
 try {
@@ -91,4 +64,74 @@ class Solution {
        } 
     }
     }
+    }
+
+
+    //Brute Force #2, Should i or j be equal to n or sum,
+   //result will be incremented until equal to the parameters.
+   function countPairs(n, sum) {
+    let result = 0;
+    for(let i = 1; i <= n; i++){
+       for(let j = i; j <= n; j++){
+         if(i + j === sum){
+             result++;
+         }
+         } 
+       }
+       return result;
+    }
+
+  //Brute Force #3, this checks every pair of numbers in the array,
+  //to see if it matches up with target. The inner loop picks the first number,
+//the outer loop picks the second. And if there sum equals target, I return both indexes.
+//Once both loops end and if no solution is found it will return [-1, -1]
+  class Solution {
+    twoSum(nums, target) {
+    for(let i = 0; i < nums.length; i++){
+        for(let j = i+1; j < nums.length; j++){
+         if(nums[i] + nums[j] === target){
+             return [i, j]
+         }   
+        }
+    }
+    return [-1, -1]
+    }
 }
+
+//Brute force #4, The logic is to iterate through each number in an array 
+//and check if it already exists in another array. Calling includes() method inside the loop
+//checks if value/nums is already present in the array, preventing duplicates from being added.
+//If value doesn't exist, we push it to the top.
+//And finally return the solution after iterating through all the elements
+class Solution {
+    removeDuplicates(nums) {
+        let uniqueValues = [];
+        for (let value of nums) {
+            if (!uniqueValues.includes(value)) {
+                uniqueValues.push(value);
+            }
+        }
+        return uniqueValues;
+    }
+}
+
+
+    //Brute force 5, It's hard to say if I actually found a solution here.
+    //The logic here is detect repeats of numbers. if the subarray doesn't include nums[j], 
+    //I update the result to the maximum length found.
+  //Meaning the current subarray is longer than the previous subarray.
+      class Solution {
+    longestSubarrayWithoutReapeating(nums) {
+    let result = 0;
+    for(let i = 0; i < nums.length; i++){
+        for(let j = i; j < nums.length; j++){
+            if(nums.slice(i,j).includes(nums[j])){
+                break;
+            }
+            result = Math.max(result,  j-i+1)
+        }
+    }
+    return result;
+    }
+}
+    
