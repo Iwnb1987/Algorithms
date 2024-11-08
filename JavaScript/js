@@ -100,9 +100,9 @@ class Solution {
 
 //Brute force #4, The logic is to iterate through each number in an array 
 //and check if it already exists in another array. Calling includes() method inside the loop
-//checks if value/nums is already present in the array, preventing duplicates from being added.
-//If value doesn't exist, we push it to the top.
-//And finally return the solution after iterating through all the elements
+//checks if value/nums is already present in the array, checking for duplicates.
+//If value doesn't exist in the array, I push() it to the top.
+//And return the solution after iterating through all the elements
 class Solution {
     removeDuplicates(nums) {
         let uniqueValues = [];
